@@ -14,3 +14,82 @@
         └── README.md
 
 7 directories, 2 files
+    1  cd~
+    2  cd
+    3  ls
+    4  cd
+    5  mkdir Bioinformatics_2025
+    6  ls
+    7  cd Bioinformatics_2025
+    8  vim text.txt
+    9  cat text.txt
+   10  mkdir seminar_1
+   11  cd seminar_1
+   12  cd~
+   13  cd ~
+   14  cd Bioinformatics_2025
+   15  mv test.txt seminar_1
+   16  mv text.txt seminar_1
+   17  ls
+   18  cp seminar_1/text.txt/
+   19  cp seminar_1/text.txt ./
+   20  ls
+   21  rm -r test
+   22  rm -r test.txt
+   23  rm -r text.txt
+   24  ls
+   25  git --version
+   26  git config --global user.name k-ondrat
+   27  git config --global user.email natalyakon43571@gmail.com
+   28  git config --global user.name
+   29  git config --global user.email
+   30  ls
+   31  mkdir my_github
+   32  ls
+   33  cd my_github
+   34  cd ~
+   35  ls -al ~/.ssh
+   36  ssh-keygen -t ed25519 -C "natalyakon43571@gmail.com"
+   37  eval "$(ssh-agent -s)"
+   38  ssh-add ~/.ssh/id_ed25519
+   39  clip < ~/.ssh/id_ed25519.pub
+   40  ~ cat ~/.ssh/id_ed25519.pub
+   41  ls
+   42  cd my_github
+   43  git clone git@github.com:k-ondrat/mipt_bioinformatics_course_2025.git
+   44  ls
+   45  cd mipt_bioinformatics_course_2025
+   46  ls
+   47  clear
+   48  mkdir -p ~/Bioinformatics_2025/hw/hw_1/
+   49  cd ~/Bioinformatics_2025/hw/hw_1/
+   50  touch my_hw_file.txt
+   51  vim my_hw_file.txt
+   52  mv my_hw_file.txt hw_file_1.txt
+   53  cd ~
+   54  mkdir homework
+   55  cp ~/Bioinformatics_2025/hw/hw_1/hw_file_1.txt ~/homework
+   56  # Я сделала ровно 5 пунктов из задания, а теперь проверим перед удалением, что все папки на месте и в файле записан текст
+   57  cd homework
+   58  ls
+   59  cat hw_file_1.txt
+   60  # Вернёмся к заданию - теперь удалим копию текста и построим дерево папок
+   61  rm hw_file_1.txt
+   62  cd~
+   63  cd ~
+   64  tree >> ~/Bioinformatics_2025/hw/hw_1/hw_file_1.txt
+   65  # Придётся сначала установить tree
+   66  sudo apt install tree
+   67  # А теперь выведим дерево
+   68  tree >> ~/Bioinformatics_2025/hw/hw_1/hw_file_1.txt
+   69  tree
+   70  # Припишем историю команд bash в конец файла
+   71  # Отмена, сначала скопируем файл в склонированный заранее репозиторий с гитхаба
+   72  ls
+   73  cd my_github/mipt_bioinformatics_course_2025
+   74  cp ~/Bioinformatics_2025/hw/hw_1/hw_file_1.txt .
+   75  git add hw_file_1.txt 
+   76  git commit -m "Add homework 1 file"
+   77  git push origin main
+   78  # А теперь добавим к нашему файлу историю команд bash
+   79  history >> hw_file_1.txt
